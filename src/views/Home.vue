@@ -1,0 +1,192 @@
+<script setup lang="ts">
+import { ref } from "vue";
+
+const getIconColorClass = (skillName: string) => {
+  switch (skillName) {
+    case "Javascript":
+      return "text-yellow-500";
+    case "Vue.js":
+      return "text-green-500";
+    case "TailWind CSS":
+      return "text-blue-500";
+    case "Laravel":
+      return "text-red-500";
+    default:
+      return "text-primary";
+  }
+};
+
+const skills = ref([
+  { name: "Javascript", icon: ["fab", "js"] },
+  { name: "Vue.js", icon: ["fab", "vuejs"] },
+  { name: "TailWind CSS", icon: ["fab", "css3"] },
+  { name: "Laravel", icon: ["fab", "laravel"] },
+]);
+
+const educations = ref([
+  { school: "Born(Battambang)", date: "May 2002", description: "Hey, guys!" },
+  {
+    school: "Preah Monivong High School",
+    date: "December 2020",
+    description: "Modelling and Simulation of Fluid Particles Inside a Room",
+  },
+  {
+    school: "Royal University of Phnom Penh",
+    date: "June 2024",
+    description: "Information Technology of Engineering",
+  },
+]);
+
+const exps = ref([
+  {company: "Addbook Computer Centre", role: "Teacher", date: "Dec 2021 - Sep 2022"},
+  {company: "Squeeze Asia", role: "Data Entry and Analysis", date: "Oct 2022 - Jul 2024"},
+  {company: "Impuls Cambodia", role: "Designer", date: "Aug 2022 - Present "},
+]);
+</script>
+
+<template>
+  <div class="min-h-screen py-10 px-6 overflow-x-hidden">
+    <div class="max-w-prose m-auto mb-8">
+      <h1 class="text-black text-4xl font-extrabold mb-0 dark:text-secondary ">Lyhour NY</h1>
+    </div>
+    <article>
+      <div class="max-w-prose m-auto slide-enter-content space-y-5">
+        <p>
+          Hey, I am Lyhour Ny, a Front-End Developer Crafting Engaging User
+          Experiences.
+        </p>
+        <p>
+          I have a passion for creating user-centric applications using modern
+          web technologies like Vue.js and Tailwind CSS. I am always eager to
+          learn and contribute to the community.
+        </p>
+        <p>
+          Outside of programming, I enjoy doing photography and traveling. Some
+          of my photos can be found on Instagram. Right now I live in Paris. If
+          you are around, feel free to reach me out, we could have some coffee
+          or work together.
+        </p>
+        <hr class="text-primary w-12 my-8 mx-auto" />
+        <div class="flex flex-row flex-wrap gap-2 mt-2 slide-enter-content">
+          <p>Skills</p>
+          <div
+            v-for="(skill, index) in skills"
+            :key="index"
+            class="flex items-center bg-box gap-2 rounded-sm px-1"
+          >
+            <font-awesome-icon :icon="skill.icon" :class="getIconColorClass(skill.name)" />
+            <span>{{ skill.name }}</span>
+          </div>
+        </div>
+        <p>Educations:</p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 slide-enter-content"
+        >
+          <div v-for="(education, index) in educations" :key="index">
+            <div class="flex items-center">
+              <div
+                class="z-10 flex items-center justify-center w-6 h-6 bg-secondary-50 rounded-full ring-0 ring-secondary dark:bg-primary-50 sm:ring-8 dark:ring-gray-900 shrink-0"
+              >
+                <font-awesome-icon
+                  icon="fa-solid fa-school"
+                  class="w-2.5 h-2.5 text-primary dark:text-secondary"
+                />
+              </div>
+              <div
+                class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"
+              ></div>
+            </div>
+            <div class="mt-4 sm:pe-8">
+              <p class="font-bold mb-1">
+                {{ education.school }}
+              </p>
+              <time
+                class="block mb-2 text-sm italic"
+                >{{ education.date }}</time
+              >
+              <p>{{ education.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <p>Working experiences:</p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 slide-enter-content"
+        >
+          <div v-for="(exp, index) in exps" :key="index">
+            <div class="flex items-center">
+              <div
+                class="z-10 flex items-center justify-center w-6 h-6 bg-secondary-50 rounded-full ring-0 ring-secondary dark:bg-primary-50 sm:ring-8 dark:ring-gray-900 shrink-0"
+              >
+                <font-awesome-icon
+                  icon="fa-solid fa-school"
+                  class="w-2.5 h-2.5 text-primary dark:text-secondary"
+                />
+              </div>
+              <div
+                class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"
+              ></div>
+            </div>
+            <div class="mt-4 sm:pe-8">
+              <p class="font-bold mb-1">
+                {{ exp.company }}
+              </p>
+              <time
+                class="block mb-2 text-sm italic"
+                >{{ exp.date }}</time
+              >
+              <p>{{ exp.role }}</p>
+            </div>
+          </div>
+        </div>
+        <hr class="text-primary w-12 my-8 mx-auto" />
+        <p>Find me on</p>
+        <p class="flex flex-wrap gap-4 mt-2 dark:text-secondary">
+          <a
+            href="https://github.com/NyLyhuo"
+            target="_blank"
+            class="flex items-center gap-2 hover:underline transition-colors duration-300"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" class="text-inherit" />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lyhour-ny-968316212/"
+            target="_blank"
+            class="flex items-center gap-2 hover:text-blue-700 hover:underline transition-colors duration-300"
+          >
+            <font-awesome-icon
+              icon="fa-brands fa-linkedin"
+              class="text-inherit"
+            />
+            LinkedIn
+          </a>
+          <a
+            href="https://t.me/bonglyhour"
+            target="_blank"
+            class="flex items-center gap-2 hover:text-blue-500 hover:underline transition-colors duration-300"
+          >
+            <font-awesome-icon
+              icon="fa-brands fa-telegram"
+              class="text-inherit"
+            />
+            Telegram
+          </a>
+          <a
+            href="https://www.instagram.com/lyhourny"
+            target="_blank"
+            class="flex items-center gap-2 hover:text-pink-500 hover:underline transition-colors duration-300"
+          >
+            <font-awesome-icon
+              icon="fa-brands fa-instagram"
+              class="text-inherit"
+            />
+            Instagram
+          </a>
+        </p>
+        <p>Or mail me at <span>lyhuony@gmail.com</span></p>
+        <hr class="text-primary w-12 my-8 mx-auto" />
+      </div>
+    </article>
+  </div>
+</template>

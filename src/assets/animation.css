@@ -1,0 +1,62 @@
+@keyframes slide-enter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .dark-mode {
+    position: relative;
+    transform: scale(0);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 250vw;
+    height: 250vw;
+    border-radius: 50%;
+    background-color: #16161616;
+    transition: 1000ms ease-in-out;
+    display: flex;
+    flex: 0 0 auto;
+  }
+  .dark-mode.active {
+    transform: scale(1);
+    transition: 1000ms ease-in-out;
+  }
+  .slide-enter-content {
+    counter-reset: enter-count;
+  }
+  
+  .slide-enter-content > p {
+    --stagger: 0;
+    --delay: 150ms;
+    --start: 0ms;
+    animation: slide-enter 1s both;
+    animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+    counter-increment: enter-count;
+    --stagger: counter(enter-count);
+  }
+
+  .slide-enter-content > a {
+    --stagger: 0;
+    --delay: 150ms;
+    --start: 0ms;
+    animation: slide-enter 1s both;
+    animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+    counter-increment: enter-count;
+    --stagger: counter(enter-count);
+  }
+
+  .slide-enter-content > div {
+    --stagger: 0;
+    --delay: 150ms;
+    --start: 0ms;
+    animation: slide-enter 1s both;
+    animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+    counter-increment: enter-count;
+    --stagger: counter(enter-count);
+  }
