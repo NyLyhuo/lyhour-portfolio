@@ -4,33 +4,27 @@ import { ref } from "vue";
 const projects = ref([
   {
     name: "Portfolio",
-    icon: ["fab", "js"],
+    icon: ["fab", "vuejs"],
     description: "Create portfolio using Vue js and Tailwind css",
-    link: "https://github.com/NyLyhuo/ecommerce-Website",
+    link: "https://github.com/NyLyhuo/lyhour-portfolio",
   },
   {
     name: "Ecommerce",
-    icon: ["fab", "vuejs"],
-    description: "Shopping website using Next js and tailwind css",
+    icon: ["fab", "react"],
+    description: "Shopping website using React js and tailwind css",
     link: "https://github.com/NyLyhuo/ecommerce-Website",
   },
   {
-    name: "todo",
-    icon: ["fab", "laravel"],
+    name: "Menu ordering",
+    icon: ["fab", "js"],
     description: "Todo website using Kotlin",
-    link: "https://github.com/NyLyhuo/ecommerce-Website",
+    link: "https://github.com/NyLyhuo/Ordering",
   },
   {
-    name: "Portfolio",
-    icon: ["fab", "js"],
-    description: "Create portfolio using Vue js and Tailwind css",
-    link: "https://github.com/NyLyhuo/ecommerce-Website",
-  },
-  {
-    name: "Portfolio",
-    icon: ["fab", "js"],
-    description: "Create portfolio using Vue js and Tailwind css",
-    link: "https://github.com/NyLyhuo/ecommerce-Website",
+    name: "Todo",
+    icon: ["fab", "java"],
+    description: "The To-Do application is a simple yet powerful task management app.",
+    link: "https://github.com/Narazxc/TaskUnity",
   },
   {
     name: "Portfolio",
@@ -53,10 +47,10 @@ const projects = ref([
       <a
         v-for="(project, index) in projects"
         :key="index"
-        class="item relative flex items-center p-4 border rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-500"
         :href="project.link"
         target="_blank"
-        title=""
+        class="relative flex items-center w-[400px] p-4 border border-dark-text rounded-lg shadow-sm hover:bg-gray-200 dark:hover:text-white dark:hover:bg-dark-background transform duration-500"
+        :title="project.name"
       >
         <div class="pt-2 pr-5">
           <font-awesome-icon :icon="project.icon" class="text-3xl opacity-50" />

@@ -86,7 +86,7 @@ const demos = ref([
         <div
           v-for="(demo, index) in demos"
           :key="index"
-          class="break-inside-avoid-column border-1 border-primary rounded-lg shadow-sm hover:shadow-lg hover:scale-110 transition-transform duration-500 overflow-hidden"
+          class="break-inside-avoid-column border-1 border-primary rounded-lg shadow-sm hover:shadow-lg hover:scale-101 transform duration-500 overflow-hidden"
         >
           <a :href="demo.link" target="_blank">
             <video

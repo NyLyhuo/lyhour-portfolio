@@ -40,14 +40,14 @@ const educations = ref([
 const exps = ref([
   {company: "Addbook Computer Centre", role: "Teacher", date: "Dec 2021 - Sep 2022"},
   {company: "Squeeze Asia", role: "Data Entry and Analysis", date: "Oct 2022 - Jul 2024"},
-  {company: "Impuls Cambodia", role: "Designer", date: "Aug 2022 - Present "},
+  {company: "Impuls Cambodia", role: "Designer", date: "Aug 2022 - Present "}
 ]);
 </script>
 
 <template>
   <div class="min-h-screen py-10 px-6 overflow-x-hidden">
     <div class="max-w-prose m-auto mb-8">
-      <h1 class="text-black text-4xl font-extrabold mb-0 dark:text-secondary ">Lyhour NY</h1>
+      <h1 class="text-black text-4xl font-extrabold mb-0 dark:text-secondary">Lyhour NY</h1>
     </div>
     <article>
       <div class="max-w-prose m-auto slide-enter-content space-y-5">
