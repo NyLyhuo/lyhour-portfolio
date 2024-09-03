@@ -10,11 +10,6 @@ function toggleDarkMode() {
   isDarkMode.value = !isDarkMode.value;
   document.documentElement.classList.toggle("dark", isDarkMode.value);
   localStorage.setItem("darkMode", JSON.stringify(isDarkMode.value));
-
-  burstVisible.value = true;
-  setTimeout(() => {
-    burstVisible.value = false;
-  }, 800);
 }
 
 onMounted(() => {
@@ -86,7 +81,6 @@ onMounted(() => {
       <li class="relative hover:text-primary dark:hover:text-white">
         <button @click="toggleDarkMode" class="relative">
           <font-awesome-icon :icon="isDarkMode ? faSun : faMoon"/>
-          <div v-if="burstVisible" class="burst"></div>
         </button>
       </li>
     </ul>
@@ -102,27 +96,5 @@ onMounted(() => {
 
 nav {
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.burst {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(255,255,255,1) 100%, rgba(255,255,255,0) 100%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  animation: burst 1.5s ease-out forwards;
-  pointer-events: none;
-}
-
-@keyframes burst {
-  0% {
-    clip-path: circle(150% at 50% 50%);
-  }
-  100% {
-    clip-path: circle(0% at 50% 50%);
-  }
 }
 </style>
