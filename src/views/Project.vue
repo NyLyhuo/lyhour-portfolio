@@ -26,12 +26,6 @@ const projects = ref([
     description: "The management task app use Kotlin.",
     link: "https://github.com/Narazxc/TaskUnity",
   },
-  {
-    name: "Portfolio",
-    icon: ["fab", "js"],
-    description: "Create portfolio using Vue js and Tailwind css",
-    link: "https://github.com/NyLyhuo/ecommerce-Website",
-  },
 ]);
 </script>
 
