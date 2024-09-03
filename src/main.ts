@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 import './assets/style.css'
 import './assets/animation.css'
 import App from './App.vue'
-import FontAwesomeIcon from './font-awesome.ts';
+import FontAwesomeIcon from './font-awesome';
 import Project from './views/Project.vue'
 import Demo from './views/Demo.vue'
 import Home from './views/Home.vue'

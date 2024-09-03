@@ -6,10 +6,10 @@ import Navbar from "./components/Navbar.vue";
   <div
     class="bg-white text-gray-700 dark:bg-dark-background dark:text-dark-text min-h-screen"
   >
-  <header>
-    <Navbar />
-  </header>
+  <Navbar />
+  <main>
     <RouterView />
+  </main>
   </div>
 </template>
   

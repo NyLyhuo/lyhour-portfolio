@@ -11,12 +11,12 @@ function toggleDarkMode() {
   document.documentElement.classList.toggle("dark", isDarkMode.value);
   localStorage.setItem("darkMode", JSON.stringify(isDarkMode.value));
 
-  // Show burst effect
   burstVisible.value = true;
   setTimeout(() => {
     burstVisible.value = false;
-  }, 600); // Duration of the burst animation
+  }, 800);
 }
+
 onMounted(() => {
   const savedPreference = localStorage.getItem("darkMode");
   if (savedPreference) {
@@ -28,11 +28,11 @@ onMounted(() => {
 
 <template>
   <nav class="p-8">
-    <ul class="font-bold flex items-center space-x-6 m-0 p-0 ">
+    <ul class="font-bold flex items-center space-x-6 m-0 p-0">
       <li class="mr-auto hover:text-primary dark:hover:text-white">
         <router-link to="/">
           <svg
-            class="w-8 h-8 fill-current"
+            class="w-8 h-8 fill-current logo"
             id="Layer_1"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,6 @@ onMounted(() => {
       <li class="hover:text-primary dark:hover:text-white">
         <router-link to="/project">Project</router-link>
       </li>
-
       <li class="hover:text-primary dark:hover:text-white">
         <router-link to="/demo">Demo</router-link>
       </li>
@@ -87,7 +86,6 @@ onMounted(() => {
       <li class="relative hover:text-primary dark:hover:text-white">
         <button @click="toggleDarkMode" class="relative">
           <font-awesome-icon :icon="isDarkMode ? faSun : faMoon"/>
-          <!-- Burst effect -->
           <div v-if="burstVisible" class="burst"></div>
         </button>
       </li>
@@ -96,7 +94,35 @@ onMounted(() => {
 </template>
 
 <style scoped>
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 nav {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255,255,255,1) 100%, rgba(255,255,255,0) 100%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: burst 1.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes burst {
+  0% {
+    clip-path: circle(150% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(0% at 50% 50%);
+  }
 }
 </style>

@@ -119,7 +119,7 @@ const exps = ref([
                 class="z-10 flex items-center justify-center w-6 h-6 bg-secondary-50 rounded-full ring-0 ring-secondary dark:bg-primary-50 sm:ring-8 dark:ring-gray-900 shrink-0"
               >
                 <font-awesome-icon
-                  icon="fa-solid fa-school"
+                  icon="fa-solid fa-briefcase"
                   class="w-2.5 h-2.5 text-primary dark:text-secondary"
                 />
               </div>
@@ -173,7 +173,7 @@ const exps = ref([
             Telegram
           </a>
           <a
-            href="https://www.instagram.com/lyhourny"
+            href="https://www.instagram.com/bonglyhour_?igsh=aWIxbXpqb3lyYmRr"
             target="_blank"
             class="flex items-center gap-2 hover:text-pink-500 hover:underline transition-colors duration-300"
           >

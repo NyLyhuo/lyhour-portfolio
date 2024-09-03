@@ -21,9 +21,9 @@ const projects = ref([
     link: "https://github.com/NyLyhuo/Ordering",
   },
   {
-    name: "Todo",
+    name: "Task Unity",
     icon: ["fab", "java"],
-    description: "The To-Do application is a simple yet powerful task management app.",
+    description: "The management task app use Kotlin.",
     link: "https://github.com/Narazxc/TaskUnity",
   },
   {

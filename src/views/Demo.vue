@@ -1,78 +1,46 @@
-
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 function removeControls(event: Event) {
   const video = event.target as HTMLVideoElement;
   video.removeAttribute("controls");
 }
 
+onMounted(() => {
+  const videos = document.querySelectorAll("video");
+  videos.forEach((video) => {
+    video.removeAttribute("controls");
+  });
+});
+
 const demos = ref([
   {
-    title: "Project 1",
+    title: "Lyhour-portfolio",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "This project builds with Vue js, TypeScript and Tailwind CSS with animation.",
     link: "https://github.com/Narazxc/TaskUnity",
     video: "/videos/vdo.mp4",
     date: "Mar 05 2024",
   },
   {
-    title: "Project 2",
+    title: "Task Unity",
     description:
-      "Donec sagittis mauris id libero bibendum, vel tristique neque vulputate.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/project2",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
+      "The management task app use Kotlin.",
+    link: "https://youtu.be/mdJAHjpCws8",
+    video: "/videos/vdo.mp4",
     date: "Mar 05 2024",
   },
   {
-    title: "Project 3",
+    title: "plants vs zombies <Clone>",
     description:
-      "Nulla facilisi. Sed vel ipsum vel sapien consectetur molestie.",
-    link: "/project3",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
-    date: "Mar 05 2024",
-  },
-  {
-    title: "Project 4",
-    description: "Nulla facilisi. Sed vel ipsum vel.",
-    link: "/project4",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
-    date: "Mar 05 2024",
-  },
-  {
-    title: "Project 5",
-    description:
-      "Donec sagittis mauris id libero bibendum, vel tristique neque vulputate.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/project2",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
-    date: "Mar 05 2024",
-  },
-  {
-    title: "Project 6",
-    description:
-      "Donec sagittis mauris id libero bibendum, vel tristique neque vulputate.",
-    link: "/project2",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
-    date: "Mar 05 2024",
-  },
-  {
-    title: "Project 7",
-    description:
-      "Donec sagittis mauris id libero bibendum, vel tristique neque vulputate.",
-    link: "/project2",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
-    date: "Mar 05 2024",
-  },
-  {
-    title: "Project 8",
-    description:
-      "Donec sagittis mauris id libero bibendum, vel tristique neque vulputate.",
-    link: "/project2",
-    video: "https://www.youtube.com/embed/xuP4g7IDgDM?si=l8269Zo1Sz9_UWmB",
-    date: "Mar 05 2024",
+      "Unity Hub, The objective is to prevent the zombies from reaching the player’s home at the far end of the screen.",
+    link: "https://youtu.be/mdJAHjpCws8",
+    video: "public/videos/zombie .mp4",
+    date: "May 25 2024",
   },
 ]);
 </script>
+
 <template>
   <div class="px-7 py-10 overflow-x-hidden">
     <div class="max-w-prose m-auto mb-8">
@@ -80,13 +48,11 @@ const demos = ref([
       <p class="italic">Demonstrations for projects</p>
     </div>
     <article>
-      <div
-        class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 slide-enter-content"
-      >
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 slide-enter-content">
         <div
           v-for="(demo, index) in demos"
           :key="index"
-          class="break-inside-avoid-column border-1 border-primary rounded-lg shadow-sm hover:shadow-lg hover:scale-101 transform duration-500 overflow-hidden"
+          class="demo-card break-inside-avoid-column border-1 border-primary rounded-lg shadow-sm hover:scale-101 hover:shadow-lg transform duration-500 overflow-hidden"
         >
           <a :href="demo.link" target="_blank">
             <video
