@@ -3,14 +3,10 @@ import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
-  <div
-    class="bg-white text-gray-700 dark:bg-dark-background dark:text-dark-text min-h-screen"
-  >
   <Navbar />
-  <main>
+  <main class="px-7 py-10">
     <RouterView />
   </main>
-  </div>
 </template>
   
 <style>

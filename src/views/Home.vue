@@ -11,6 +11,8 @@ const getIconColorClass = (skillName: string) => {
       return "text-blue-500";
     case "Laravel":
       return "text-red-500";
+    case "Git":
+      return "text-orange-500";
     default:
       return "text-primary";
   }
@@ -20,7 +22,8 @@ const skills = ref([
   { name: "Javascript", icon: ["fab", "js"] },
   { name: "Vue.js", icon: ["fab", "vuejs"] },
   { name: "TailWind CSS", icon: ["fab", "css3"] },
-  { name: "Laravel", icon: ["fab", "laravel"] },
+  //{ name: "Laravel", icon: ["fab", "laravel"] },
+  {name: "Git", icon: ["fab", "git-alt"] },
 ]);
 
 const educations = ref([
@@ -57,14 +60,10 @@ const exps = ref([
         </p>
         <p>
           I have a passion for creating user-centric applications using modern
-          web technologies like Vue.js and Tailwind CSS. I am always eager to
-          learn and contribute to the community.
+          web technologies. I am always eager to learn and contribute to the community.
         </p>
         <p>
-          Outside of programming, I enjoy doing photography and traveling. Some
-          of my photos can be found on Instagram. Right now I live in Paris. If
-          you are around, feel free to reach me out, we could have some coffee
-          or work together.
+          Outside of programming, I enjoy traveling and playing video game.
         </p>
         <hr class="text-primary w-12 my-8 mx-auto" />
         <div class="flex flex-row flex-wrap gap-2 mt-2 slide-enter-content">

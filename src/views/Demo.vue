@@ -28,7 +28,7 @@ const demos = ref([
       "The management task app use Kotlin.",
     link: "https://youtu.be/mdJAHjpCws8",
     video: "/videos/task.mp4",
-    date: "Mar 05 2024",
+    date: "Jan 07 2024",
   },
   {
     title: "Menu Ordering",
