@@ -62,9 +62,6 @@ const exps = ref([
           I have a passion for creating user-centric applications using modern
           web technologies. I am always eager to learn and contribute to the community.
         </p>
-        <p>
-          Outside of programming, I enjoy traveling and playing video game.
-        </p>
         <hr class="text-primary w-12 my-8 mx-auto" />
         <div class="flex flex-row flex-wrap gap-2 mt-2 slide-enter-content">
           <p>Skills</p>
@@ -139,7 +136,7 @@ const exps = ref([
           </div>
         </div>
         <hr class="text-primary w-12 my-8 mx-auto" />
-        <p>Find me on</p>
+        <p>Connect with me!</p>
         <p class="flex flex-wrap gap-4 mt-2 dark:text-secondary">
           <a
             href="https://github.com/NyLyhuo"
@@ -183,8 +180,6 @@ const exps = ref([
             Instagram
           </a>
         </p>
-        <p>Or mail me at <span>lyhuony@gmail.com</span></p>
-        <hr class="text-primary w-12 my-8 mx-auto" />
       </div>
     </article>
   </div>

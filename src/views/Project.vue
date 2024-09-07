@@ -17,7 +17,7 @@ const projects = ref([
   {
     name: "Menu ordering",
     icon: ["fab", "js"],
-    description: "Todo website using Kotlin",
+    description: "Provide a list of food that user can order and pay on online.",
     link: "https://github.com/NyLyhuo/Ordering",
   },
   {
