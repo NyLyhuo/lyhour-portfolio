@@ -36,14 +36,14 @@ const projects = ref([
       <p class="italic">Projects that I created and practiced</p>
     </div>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-2 max-w-500 w-max mx-auto slide-enter-content"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-2 max-w-screen-lg w-full mx-auto slide-enter-content"
     >
       <a
         v-for="(project, index) in projects"
         :key="index"
         :href="project.link"
         target="_blank"
-        class="relative flex items-center w-[400px] p-4 border border-dark-text rounded-lg shadow-sm hover:bg-gray-200 dark:hover:text-white dark:hover:bg-dark-background transform duration-500"
+        class="relative flex items-center w-full p-4 border border-dark-text rounded-lg shadow-sm hover:bg-gray-200 dark:hover:text-white dark:hover:bg-dark-background transform duration-500"
         :title="project.name"
       >
         <div class="pt-2 pr-5">

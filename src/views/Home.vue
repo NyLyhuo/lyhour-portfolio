@@ -89,7 +89,7 @@ const exps = ref([
                 />
               </div>
               <div
-                class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"
+                class="sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"
               ></div>
             </div>
             <div class="mt-4 sm:pe-8">
@@ -120,7 +120,7 @@ const exps = ref([
                 />
               </div>
               <div
-                class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"
+                class="sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"
               ></div>
             </div>
             <div class="mt-4 sm:pe-8">
