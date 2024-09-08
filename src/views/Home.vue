@@ -27,15 +27,15 @@ const skills = ref([
 ]);
 
 const educations = ref([
-  { school: "Born(Battambang)", date: "May 2002", description: "Hey, guys!" },
+  { school: "Preah Monivong High School", date: "December 2020", description: "Bac II" },
   {
-    school: "Preah Monivong High School",
-    date: "December 2020",
-    description: "Modelling and Simulation of Fluid Particles Inside a Room",
+    school: "Cambodia ASEAN International Institute",
+    date: "April 2021 - May 2023",
+    description: "General English Program",
   },
   {
     school: "Royal University of Phnom Penh",
-    date: "June 2024",
+    date: "Mar 2021 - June 2024",
     description: "Information Technology of Engineering",
   },
 ]);
@@ -43,7 +43,7 @@ const educations = ref([
 const exps = ref([
   {company: "Addbook Computer Centre", role: "Teacher", date: "Dec 2021 - Sep 2022"},
   {company: "Squeeze Asia", role: "Data Entry and Analysis", date: "Oct 2022 - Jul 2024"},
-  {company: "Impuls Cambodia", role: "Designer", date: "Aug 2022 - Present "}
+  {company: "(Volunteer)Impuls Cambodia", role: "Designer", date: "Aug 2022 - Present "}
 ]);
 </script>
 
