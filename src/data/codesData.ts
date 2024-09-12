@@ -23,4 +23,10 @@ export const codes= [
       description: "The management task app use Kotlin.",
       link: "https://github.com/Narazxc/TaskUnity",
     },
+    {
+      name: "Todo list",
+      icon: ["fab", "vuejs"],
+      description: "Create a list that we need to complete",
+      link: "https://github.com/NyLyhuo/todo-list",
+    },
   ];
