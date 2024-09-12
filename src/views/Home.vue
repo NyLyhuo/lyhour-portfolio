@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { experiences as experiencesData } from "../data/experiencesData";
+import { skills as skillsData } from "../data/skillsData";
+import { educations as educationsData } from "../data/educationsData";
+
+const exps = ref(experiencesData);
+const skills = ref(skillsData);
+const educations = ref(educationsData);
 
 const getIconColorClass = (skillName: string) => {
   switch (skillName) {
@@ -17,34 +24,6 @@ const getIconColorClass = (skillName: string) => {
       return "text-primary";
   }
 };
-
-const skills = ref([
-  { name: "Javascript", icon: ["fab", "js"] },
-  { name: "Vue.js", icon: ["fab", "vuejs"] },
-  { name: "TailWind CSS", icon: ["fab", "css3"] },
-  //{ name: "Laravel", icon: ["fab", "laravel"] },
-  {name: "Git", icon: ["fab", "git-alt"] },
-]);
-
-const educations = ref([
-  { school: "Preah Monivong High School", date: "December 2020", description: "Bac II" },
-  {
-    school: "Cambodia ASEAN International Institute",
-    date: "April 2021 - May 2023",
-    description: "General English Program",
-  },
-  {
-    school: "Royal University of Phnom Penh",
-    date: "Mar 2021 - June 2024",
-    description: "Information Technology of Engineering",
-  },
-]);
-
-const exps = ref([
-  {company: "Addbook Computer Centre", role: "Teacher", date: "Dec 2021 - Sep 2022"},
-  {company: "Squeeze Asia", role: "Data Entry and Analysis", date: "Oct 2022 - Jul 2024"},
-  {company: "(Volunteer)Impuls Cambodia", role: "Designer", date: "Aug 2022 - Present "}
-]);
 </script>
 
 <template>
