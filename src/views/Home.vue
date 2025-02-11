@@ -34,8 +34,7 @@ const getIconColorClass = (skillName: string) => {
     <article>
       <div class="max-w-prose m-auto slide-enter-content space-y-5">
         <p>
-          Hey, I am Lyhour Ny, a Front-End Developer Crafting Engaging User
-          Experiences.
+          Hey, I am Lyhour Ny, a Web Developer and Designer.
         </p>
         <p>
           I have a passion for creating user-centric applications using modern
