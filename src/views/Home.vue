@@ -125,7 +125,7 @@ const getIconColorClass = (skillName: string) => {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/lyhour-ny-968316212/"
+            href="https://www.linkedin.com/in/lyhourny5/"
             target="_blank"
             class="flex items-center gap-2 hover:text-blue-700 hover:underline transition-colors duration-300"
           >
