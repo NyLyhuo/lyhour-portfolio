@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 </script>
 
 <template>
   <Navbar />
   <main class="px-7 py-10">
     <RouterView />
+    <SpeedInsights />
   </main>
 </template>
 
